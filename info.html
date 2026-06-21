@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مركز قيادة غرفة عمليات الثانوية العامة - إدارة مطوبس التعليمية</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Tahoma',sans-serif;
+}
+
+body{
+background:#08111f;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+background:linear-gradient(90deg,#001f3f,#003366);
+padding:20px;
+text-align:center;
+border-bottom:3px solid #00d4ff;
+}
+
+header h1{
+font-size:32px;
+color:#00d4ff;
+}
+
+header h2{
+font-size:20px;
+margin-top:8px;
+}
+
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:25px;
+}
+
+.card{
+background:#0d1b2a;
+border:1px solid #00d4ff55;
+border-radius:15px;
+padding:20px;
+text-align:center;
+box-shadow:0 0 15px #00d4ff33;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #00d4ff88;
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+color:#00d4ff;
+}
+
+.number{
+font-size:42px;
+font-weight:bold;
+}
+
+.section{
+margin:20px;
+background:#0d1b2a;
+padding:20px;
+border-radius:15px;
+border:1px solid #00d4ff33;
+}
+
+.section h2{
+margin-bottom:15px;
+color:#00d4ff;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+table th,
+table td{
+padding:12px;
+border:1px solid #1c3d5a;
+text-align:center;
+}
+
+table th{
+background:#003366;
+}
+
+.green{
+color:#00ff99;
+font-weight:bold;
+}
+
+.yellow{
+color:#ffd700;
+font-weight:bold;
+}
+
+.red{
+color:#ff5555;
+font-weight:bold;
+}
+
+.news{
+overflow:hidden;
+white-space:nowrap;
+background:#001a33;
+padding:12px;
+border-top:2px solid #00d4ff;
+border-bottom:2px solid #00d4ff;
+}
+
+.news span{
+display:inline-block;
+padding-right:100%;
+animation:move 18s linear infinite;
+}
+
+@keyframes move{
+from{transform:translateX(0);}
+to{transform:translateX(-100%);}
+}
+
+.footer{
+text-align:center;
+padding:15px;
+margin-top:20px;
+background:#001122;
+}
+
+.clock{
+font-size:28px;
+color:#00ff99;
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>غرفة عمليات الثانوية العامة</h1>
+<h2>إدارة مطوبس التعليمية</h2>
+<div class="clock" id="clock"></div>
+</header>
+
+<div class="news">
+<span>
+📢 متابعة لحظية لأعمال غرفة العمليات - جميع اللجان تعمل بصورة طبيعية - تم حل كافة البلاغات الواردة حتى الآن
+</span>
+</div>
+
+<div class="dashboard">
+
+<div class="card">
+<h3>عدد اللجان</h3>
+<div class="number">24</div>
+</div>
+
+<div class="card">
+<h3>عدد الطلاب</h3>
+<div class="number">5,420</div>
+</div>
+
+<div class="card">
+<h3>البلاغات الواردة</h3>
+<div class="number">12</div>
+</div>
+
+<div class="card">
+<h3>تم حلها</h3>
+<div class="number">11</div>
+</div>
+
+</div>
+
+<div class="section">
+<h2>حالة اللجان</h2>
+
+<table>
+<tr>
+<th>اسم اللجنة</th>
+<th>الحالة</th>
+<th>الملاحظات</th>
+</tr>
+
+<tr>
+<td>فتح الله بركات الإعدادية</td>
+<td class="green">مستقرة</td>
+<td>لا توجد ملاحظات</td>
+</tr>
+
+<tr>
+<td>مطوبس الثانوية</td>
+<td class="yellow">متابعة</td>
+<td>بلاغ بسيط جاري التعامل معه</td>
+</tr>
+
+<tr>
+<td>الشهيد عبد المنعم رياض</td>
+<td class="green">مستقرة</td>
+<td>سير منتظم</td>
+</tr>
+
+</table>
+</div>
+
+<div class="section">
+<h2>مؤشرات الأداء</h2>
+
+<table>
+<tr>
+<th>المؤشر</th>
+<th>القيمة</th>
+</tr>
+
+<tr>
+<td>نسبة حل البلاغات</td>
+<td>92%</td>
+</tr>
+
+<tr>
+<td>متوسط زمن الاستجابة</td>
+<td>4 دقائق</td>
+</tr>
+
+<tr>
+<td>معدل الانضباط</td>
+<td>98%</td>
+</tr>
+
+</table>
+</div>
+
+<div class="section">
+<h2>خريطة اللجان</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=Motobas&t=&z=11&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="400"
+style="border:none;border-radius:10px;">
+</iframe>
+
+</div>
+
+<div class="footer">
+جميع الحقوق محفوظة © غرفة عمليات الثانوية العامة - إدارة مطوبس التعليمية
+</div>
+
+<script>
+
+function updateClock(){
+const now = new Date();
+
+let h = now.getHours().toString().padStart(2,'0');
+let m = now.getMinutes().toString().padStart(2,'0');
+let s = now.getSeconds().toString().padStart(2,'0');
+
+document.getElementById("clock").innerHTML =
+"🕒 " + h + ":" + m + ":" + s;
+}
+
+setInterval(updateClock,1000);
+updateClock();
+
+</script>
+
+</body>
+</html>
